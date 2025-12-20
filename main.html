@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Colloque international – IA & analyse linguistique / didactique des langues – Hanoi 2026</title>
+
+  <!-- Tailwind CDN (sans installation) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    /* petite lisibilité des longues listes */
+    .prose ul { margin-top: .5rem; margin-bottom: .5rem; }
+    .prose li { margin-top: .25rem; margin-bottom: .25rem; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-slate-50 text-slate-900 antialiased">
+  <!-- Accent institutionnel (sobre) -->
+  <div class="fixed inset-x-0 top-0 h-1 bg-slate-900"></div>
+
+  <header class="relative">
+    <div class="mx-auto max-w-6xl px-4 pt-10 pb-6">
+      <!-- Badge date/lieu -->
+      <div class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm">
+        <span class="inline-block h-2 w-2 rounded-full bg-emerald-600"></span>
+        <span><strong>16–17 avril 2026</strong> · Hanoi (Vietnam)</span>
+      </div>
+
+      <!-- Logos (emplacements) -->
+      <div class="mt-6 flex flex-wrap items-center gap-6">
+        <img src="images/logo.jpg" alt="Université d’ArtoisXX"
+             class="h-12 object-contain grayscale hover:grayscale-0 transition" />
+        <img src="images/logo.jpg" alt="ULEI Hanoi"
+             class="h-12 object-contain grayscale hover:grayscale-0 transition" />
+        <img src="images/logo.jpg" alt="Laboratoire Grammatica"
+             class="h-12 object-contain grayscale hover:grayscale-0 transition" />
+        <!-- Ajouter d'autres logos si besoin -->
+      </div>
+
+      <!-- Titre + résumé -->
+      <div class="mt-8 grid gap-6 md:grid-cols-12 md:items-end">
+        <div class="md:col-span-8">
+          <h1 class="text-balance text-3xl font-semibold tracking-tight sm:text-5xl">
+            <span class="text-slate-700">Intelligence artificielle, un levier pour l’analyse linguistique<br class="hidden sm:block">
+            et la didactique des langues</span>
+          </h1>
+          <p class="mt-4 max-w-3xl text-pretty text-base text-slate-700 sm:text-lg">
+            Ce colloque vise à dresser un état des lieux de l’usage de l’IA dans l’analyse linguistique et dans
+            le champ de la didactique des langues, et à interroger les enjeux épistémologiques, méthodologiques,
+            pédagogiques, éthiques et politiques liés à son intégration dans la recherche, la formation et l’enseignement.
+          </p>
+
+          <!-- <div class="mt-6 flex flex-wrap gap-3">
+            <a href="#appel-a-communications"
+               class="rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-semibold hover:bg-slate-800 transition shadow-sm">
+              Voir l’appel à communications
+            </a>
+            <a href="#informations-pratiques"
+               class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-800 hover:bg-slate-50 transition shadow-sm">
+              Informations pratiques
+            </a>
+          </div> -->
+        </div>
+
+        <!-- Encadré dates / contact -->
+        <div class="md:col-span-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div class="text-sm text-slate-600">Soumission / Contact</div>
+            <div class="mt-2 text-lg font-semibold text-slate-900 break-words">colloqueiahanoi2026@univ-artois.fr</div>
+
+            <div class="mt-4 grid gap-2 text-sm text-slate-700">
+              <div class="flex items-center justify-between gap-3">
+                <span>Dépôt du résumé</span>
+                <span class="font-semibold text-slate-900">05 janv. 2026</span>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <span>Notification</span>
+                <span class="font-semibold text-slate-900">06 fév. 2026</span>
+              </div>
+              <div class="flex items-center justify-between gap-3">
+                <span>Colloque</span>
+                <span class="font-semibold text-slate-900">16–17 avr. 2026</span>
+              </div>
+            </div>
+
+            <div class="mt-4 rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-900">
+              Présentation à distance possible si vous ne pouvez pas venir sur place.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image HERO (emplacement) -->
+      <div class="mt-8">
+        <img src="images/ia2.jpg"
+             alt="Hanoi – IA, linguistique et didactique"
+             class="w-full rounded-2xl border border-slate-200 shadow-sm object-cover max-h-[160px]" />
+        <p class="mt-2 text-xs text-slate-500 italic">
+        </p>
+      </div>
+    </div>
+
+    <!-- Onglets -->
+    <div class="sticky top-0 z-30 border-y border-slate-200 bg-white/90 backdrop-blur">
+      <nav class="mx-auto max-w-6xl px-4">
+        <div class="flex items-center gap-2 overflow-x-auto py-3">
+          <button class="tab-btn" data-tab="appel-a-communications">Appel à communications</button>
+          <button class="tab-btn" data-tab="comite-organisation">Comité d’organisation</button>
+          <button class="tab-btn" data-tab="comite-scientifique">Comité scientifique</button>
+          <button class="tab-btn" data-tab="conferenciers-invites">Conférenciers invités</button>
+          <button class="tab-btn" data-tab="programme">Programme</button>
+          <button class="tab-btn" data-tab="informations-pratiques">Informations pratiques</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-6xl px-4 py-10">
+    <div class="grid gap-8 md:grid-cols-12">
+      <!-- Contenu -->
+      <section class="md:col-span-8 space-y-6">
+
+        <!-- Appel -->
+        <article id="appel-a-communications" class="tab-panel">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Appel à communications</h2>
+
+            <div class="prose max-w-none text-slate-700">
+              <p>
+                L’arrivée des modèles d’intelligence artificielle générative en 2022 témoigne d’une accélération
+                spectaculaire du développement d’applications fondées sur l’IA. Ces outils ont reconfiguré la manière
+                dont les langues sont observées, analysées et enseignées, et s’inscrivent dans une dynamique mondiale
+                de transformation des pratiques éducatives (cadres UNESCO/OCDE et rapports nationaux).
+              </p>
+
+              <!-- Contexte long en accordéon -->
+              <details class="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <summary class="cursor-pointer font-semibold text-slate-900">Contexte</summary>
+                <div class="mt-3 text-sm leading-relaxed">
+                  <p>
+                    Les outils conversationnels (ex. ChatGPT, Bard) et multimodaux (ex. DALL-E, HeyGen) favorisent
+                    personnalisation, créativité et engagement, tout en posant des questions de biais, d’équité,
+                    d’accès aux ressources, de transparence et d’éthique. Dans le domaine de l’enseignement/apprentissage
+                    des langues, ces enjeux touchent aussi l’authenticité des contenus, les littératies et la diversité
+                    linguistique et culturelle (plurilinguisme, normes, variations sociolangagières).
+                  </p>
+                  <!-- <p class="text-slate-600 text-xs">
+                    XXX
+                  </p> -->
+                </div>
+              </details>
+
+              <p class="mt-6">
+                Les propositions de communications sont invitées à s’inscrire dans un des axes suivants :
+              </p>
+
+              <!-- Axes -->
+              <div class="mt-5 grid gap-4">
+                <details class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <summary class="font-semibold text-slate-900">Axe 1 · L’IA et l’analyse linguistique</summary>
+                  <p class="mt-2 text-sm">
+                    Impacts de l’IA sur la constitution et la représentativité des corpus, l’analyse des unités phraséologiques
+                    (collocations, routines, cooccurrents), la variation linguistique (y compris multilingue), ainsi que les
+                    apports/limites pour l’analyse du discours.
+                  </p>
+                  <ul class="mt-3 list-disc pl-5 text-sm">
+                    <li>Comment garantir la représentativité linguistique et l’authenticité des corpus entraînés par l’IA ?</li>
+                    <li>L’IA est-elle efficace pour analyser la variation au sein de corpus multilingues ?</li>
+                    <li>Quels apports pour l’identification et la modélisation des structures langagières ?</li>
+                    <li>Quels bénéfices et limites pour l’analyse du discours assistée par l’IA ?</li>
+                    <li>Quels enjeux épistémologiques et méthodologiques pour la constitution/exploitation du corpus ?</li>
+                  </ul>
+                </details>
+
+                <details class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <summary class="font-semibold text-slate-900">Axe 2 · L’IA et la didactique des langues</summary>
+                  <p class="mt-2 text-sm">
+                    Effets de l’IA (notamment générative) sur la didactisation des savoirs langagiers, les pratiques pédagogiques,
+                    les littératies (écrit/oral/numérique), les questions d’authenticité, d’ouverture des sources, et la diversité
+                    linguistique et culturelle (plurilinguisme, normes, standardisation, variations sociolangagières).
+                  </p>
+                  <ul class="mt-3 list-disc pl-5 text-sm">
+                    <li>Qu’est-ce qu’apporte l’IA pour l’enseignement/apprentissage des langues ?</li>
+                    <li>Quels sont les biais de l’intégration de l’IA en classe de langue ?</li>
+                    <li>Quels impacts sur les compétences linguistiques, pragmatiques, phraséologiques et structurelles ?</li>
+                    <li>Dans quelle mesure l’IA contribue-t-elle au FOS (français sur objectif spécifique) et au FLP (français langue professionnelle) ?</li>
+                  </ul>
+                </details>
+
+                <details class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <summary class="font-semibold text-slate-900">Axe 3 · L’IA et l’ingénierie de formation</summary>
+                  <p class="mt-2 text-sm">
+                    Transformation des dispositifs de formation, de l’écosystème éducatif et scientifique, évolution des rôles
+                    (enseignant/apprenant), culture de la recherche, ressources, autonomie et métacognition.
+                  </p>
+                  <ul class="mt-3 list-disc pl-5 text-sm">
+                    <li>Comment les chatbots participent-ils à la scénarisation pédagogique tout en respectant la perspective actionnelle ?</li>
+                    <li>Comment évolue le rôle de l’enseignant face à l’intégration massive de l’IA ?</li>
+                    <li>Quelles compétences nouvelles développer chez les enseignants ?</li>
+                    <li>Comment l’IA redéfinit-elle les tâches de l’enseignant ?</li>
+                    <li>Quelles relations se construisent entre l’apprenant et l’IA ?</li>
+                    <li>L’IA peut-elle soutenir autonomie, motivation et prise de conscience métalinguistique ?</li>
+                  </ul>
+                </details>
+              </div>
+
+              <!-- Illustration (emplacement) -->
+              <!-- <div class="mt-6 grid gap-6 md:grid-cols-2 md:items-center">
+                <div>
+                  <img src="images/ia1.jpg"
+                       alt="Illustration IA & linguistique"
+                       class="w-full rounded-xl border border-slate-200 shadow-sm" />
+                  <p class="mt-2 text-xs text-slate-500 italic">IA & analyse linguistique / didactique</p>
+                </div>
+                <div class="text-sm leading-relaxed">
+                  <p>
+                    Cette zone peut servir à une figure (schéma, visualisation de corpus, réseau lexical, carte des axes…)
+                    ou à une photo institutionnelle liée au colloque.
+                  </p>
+                </div>
+              </div> -->
+
+              <!-- Soumission -->
+              <h3 class="mt-8 text-lg font-semibold text-slate-900">Format de soumission</h3>
+              <div class="mt-3 rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <ul class="list-disc pl-5 text-sm">
+                  <li>Propositions en <strong>français ou en anglais</strong>, <strong>500 mots maximum</strong> (hors bibliographie).</li>
+                  <li>Envoi par courriel à : <strong>colloqueiahanoi2026@univ-artois.fr</strong></li>
+                  <li>Formats : <strong>PDF</strong> ou <strong>Word (.docx)</strong> / <strong>LibreOffice (.odt)</strong></li>
+                  <li>Évaluation en <strong>double aveugle</strong> par le comité scientifique.</li>
+                  <li>Une <strong>publication avec numéro ISBN</strong> est prévue à l’issue du colloque.</li>
+                </ul>
+              </div>
+
+              <h3 class="mt-6 text-lg font-semibold text-slate-900">La proposition devra comporter</h3>
+              <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <ul class="text-sm">
+                    <li>Nom, prénom(s) et affiliation(s) académique(s)</li>
+                    <li>Adresse électronique de correspondance</li>
+                    <li>Titre de la proposition</li>
+                    <li>Cinq mots-clés</li>
+                  </ul>
+                </div>
+                <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                  <ul class="text-sm">
+                    <li>Axe ciblé</li>
+                    <li>Problématique</li>
+                    <li>Objectif(s) / question(s) de recherche</li>
+                    <li>Cadre(s) théorique(s)</li>
+                    <li>Méthodologie (s’il y a lieu)</li>
+                    <li>Bibliographie succincte (10 références max)</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Echéancier + frais -->
+              <div class="mt-8 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                  <h4 class="font-semibold text-slate-900">Échéancier</h4>
+                  <div class="mt-3 overflow-hidden rounded-lg border border-slate-200">
+                    <div class="divide-y divide-slate-200 text-sm">
+                      <div class="flex items-center justify-between px-3 py-2">
+                        <span>Dépôt du résumé</span><strong>05 janvier 2026</strong>
+                      </div>
+                      <div class="flex items-center justify-between px-3 py-2">
+                        <span>Notification aux auteurs</span><strong>06 février 2026</strong>
+                      </div>
+                      <div class="flex items-center justify-between px-3 py-2">
+                        <span>Date du colloque</span><strong>16–17 avril 2026</strong>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-xl border border-slate-200 bg-white p-4">
+                  <h4 class="font-semibold text-slate-900">Droits d’inscription</h4>
+                  <div class="mt-3 overflow-hidden rounded-lg border border-slate-200">
+                    <div class="divide-y divide-slate-200 text-sm">
+                      <div class="flex items-center justify-between px-3 py-2">
+                        <span>Tarif étudiants</span><strong>40 €</strong>
+                      </div>
+                      <div class="flex items-center justify-between px-3 py-2">
+                        <span>Tarif enseignants-chercheurs</span><strong>60 €</strong>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="mt-3 text-sm text-slate-700">
+                    Présentation à distance possible si vous ne pouvez pas venir sur place.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </article>
+
+        <!-- Comité d'organisation -->
+        <article id="comite-organisation" class="tab-panel hidden">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Comité d’organisation</h2>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Minh Thuy DAM</div>
+                <div class="text-sm text-slate-700">ULEI, Hanoi, Vietnam</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Mouny SAMY MODELIAR</div>
+                <div class="text-sm text-slate-700">CRIL, Université d’Artois</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Huy Linh DAO</div>
+                <div class="text-sm text-slate-700">CRLAO, INALCO</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Jean-Marc MANGIANTE</div>
+                <div class="text-sm text-slate-700">GRAMMATICA, Université d’Artois</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Maria KONTOZOGLOU</div>
+                <div class="text-sm text-slate-700">GRAMMATICA, Université d’Artois</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="font-semibold">Thi Thu Hoai TRAN</div>
+                <div class="text-sm text-slate-700">GRAMMATICA, Université d’Artois</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Comité scientifique -->
+        <article id="comite-scientifique" class="tab-panel hidden">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Comité scientifique</h2>
+            <div class="mt-5 grid gap-3 sm:grid-cols-2">
+              <div class="member">Arnaud Pannier <span class="affil">Ambassade de France au Vietnam</span></div>
+              <div class="member">Catherine Couturier <span class="affil">Université d’Artois</span></div>
+              <div class="member">Cécile Avezard-Roger <span class="affil">Université d’Artois</span></div>
+              <div class="member">Céline Corteel <span class="affil">Université d’Artois</span></div>
+              <div class="member">Cindy Charneau <span class="affil">Université de Grenade, Espagne</span></div>
+              <div class="member">Cristelle Cavalla <span class="affil">Université Sorbonne Nouvelle</span></div>
+              <div class="member">Damien Nouvel <span class="affil">ERTIM &amp; INALCO</span></div>
+              <div class="member">Danh-Thanh Do-Hurinville <span class="affil">Université Marie &amp; Louis Pasteur</span></div>
+              <div class="member">Henry Tyne <span class="affil">Université de Perpignan</span></div>
+              <div class="member">Jan Goes <span class="affil">Université d’Artois</span></div>
+              <div class="member">Julie Sorba <span class="affil">Université Grenoble Alpes &amp; LIDILEM</span></div>
+              <div class="member">Lian Chen <span class="affil">LLL &amp; Université d’Orléans</span></div>
+              <div class="member">Luis Meneses <span class="affil">Université d’Artois</span></div>
+              <div class="member">Marie Lefelle <span class="affil">Université de Lille</span></div>
+              <div class="member">Mathilde Vallespir <span class="affil">Université d’Artois</span></div>
+              <div class="member">Olivier Kraif <span class="affil">Université Grenoble Alpes</span></div>
+              <div class="member">Roberto Paternostro <span class="affil">Université de Genève, Suisse</span></div>
+              <div class="member">Rui Yan <span class="affil">Université Grenoble Alpes</span></div>
+              <div class="member">Sylvain Hatier <span class="affil">Université Grenoble Alpes</span></div>
+              <div class="member">Yayoi Nakamura-Delloye <span class="affil">IFRAE &amp; INALCO</span></div>
+              <div class="member">Zied Bouraoui <span class="affil">CRIL, Université d’Artois</span></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Invités -->
+        <article id="conferenciers-invites" class="tab-panel hidden">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Conférenciers invités</h2>
+            <p class="mt-3 text-slate-700">À venir.</p>
+            <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+              <strong class="text-slate-900">À compléter :</strong> noms, institutions, titre de conférence, bio courte.
+            </div>
+          </div>
+        </article>
+
+        <!-- Programme -->
+        <article id="programme" class="tab-panel hidden">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Programme</h2>
+            <p class="mt-3 text-slate-700">À venir.</p>
+            <div class="mt-5 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm text-slate-700">
+              <strong class="text-slate-900">À compléter :</strong> sessions, horaires, salles, pauses, liens visio (si hybride).
+            </div>
+          </div>
+        </article>
+
+        <!-- Infos pratiques -->
+        <article id="informations-pratiques" class="tab-panel hidden">
+          <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 class="text-2xl font-semibold tracking-tight text-slate-900">Informations pratiques</h2>
+
+            <div class="mt-5 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-600">Lieu</div>
+                <div class="mt-1 font-semibold text-slate-900">Hanoi (Vietnam)</div>
+                <p class="mt-2 text-sm text-slate-700">
+                  Adresse précise / campus / plan d’accès : <em>(à compléter)</em>
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-600">Dates</div>
+                <div class="mt-1 font-semibold text-slate-900">Jeudi 16 – Vendredi 17 avril 2026</div>
+                <p class="mt-2 text-sm text-slate-700">
+                  Accueil et ouverture : <em>(à compléter)</em>
+                </p>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-600">Inscription</div>
+                <div class="mt-1 font-semibold text-slate-900">Droits d’inscription</div>
+                <ul class="mt-2 space-y-1 text-sm text-slate-700">
+                  <li>Étudiants : <strong>40 €</strong></li>
+                  <li>Enseignants-chercheurs : <strong>60 €</strong></li>
+                </ul>
+                <p class="mt-2 text-sm text-slate-700">Présentation à distance possible si besoin.</p>
+              </div>
+
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-600">Contact</div>
+                <div class="mt-1 font-semibold text-slate-900 break-words">colloqueiahanoi2026@univ-artois.fr</div>
+                <p class="mt-2 text-sm text-slate-700">
+                  Questions : soumission, inscription, attestation, logistique.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bloc image / carte / plan -->
+            <div class="mt-6 rounded-xl border border-slate-200 bg-white p-4">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <div class="font-semibold text-slate-900">Plan / accès / informations voyage</div>
+                  <!-- <div class="text-sm text-slate-700">Insère ici une carte, un plan, ou un visuel d’accès.</div> -->
+                </div>
+                <!-- <div class="text-xs text-slate-500">Optionnel</div> -->
+              </div>
+
+              <div class="mt-4 grid gap-4 md:grid-cols-2">
+                <iframe class="w-full rounded-xl border border-slate-200 bg-slate-50 object-cover max-h-[220px]"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2590.3091788667307!2d105.79307631227806!3d20.989437050765705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU5JzIxLjUiTiAxMDXCsDQ3JzQyLjkiRQ!5e0!3m2!1sfr!2sfr!4v1766254566083!5m2!1sfr!2sfr"
+                frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                </iframe>
+                <!-- <img src="images/map-placeholder.jpg" alt="Plan d’accès" -->
+                     <!-- class="w-full rounded-xl border border-slate-200 bg-slate-50 object-cover max-h-[220px]" /> -->
+                <div class="text-sm text-slate-700 leading-relaxed">
+                  <ul class="list-disc pl-5">
+                    <li>Accès depuis l’aéroport : <em>(à compléter)</em></li>
+                    <li>Hôtels recommandés : <em>(à compléter)</em></li>
+                    <li>Visa / invitation : <em>(à compléter)</em></li>
+                    <li>Restauration : <em>(à compléter)</em></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sponsors / partenaires -->
+            <section class="mt-8">
+              <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+                <h3 class="text-xl font-semibold text-slate-900">Sponsors &amp; partenaires</h3>
+                <p class="mt-2 text-sm text-slate-700">
+                  Les partenaires institutionnels et scientifiques du colloque seront annoncés prochainement.
+                </p>
+
+                <div class="mt-6 flex flex-wrap items-center gap-8">
+                  <img src="images/logo-partenaire1.png" alt="Partenaire 1"
+                       class="h-10 object-contain grayscale opacity-80" />
+                  <img src="images/logo-partenaire2.png" alt="Partenaire 2"
+                       class="h-10 object-contain grayscale opacity-80" />
+                  <img src="images/logo-partenaire3.png" alt="Partenaire 3"
+                       class="h-10 object-contain grayscale opacity-80" />
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+
+      </section>
+
+      <!-- Sidebar -->
+      <aside class="md:col-span-4">
+        <div class="sticky top-24 space-y-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Résumé</h3>
+            <ul class="mt-3 space-y-2 text-sm text-slate-700">
+              <li><span class="font-semibold text-slate-900">Lieu :</span> Hanoi (Vietnam)</li>
+              <li><span class="font-semibold text-slate-900">Dates :</span> 16–17 avril 2026</li>
+              <li><span class="font-semibold text-slate-900">Soumission :</span> 500 mots max · FR/EN</li>
+              <li><span class="font-semibold text-slate-900">Email :</span> colloqueiahanoi2026@univ-artois.fr</li>
+              <li><span class="font-semibold text-slate-900">Tarifs :</span> 40€ (étudiants) · 60€ (EC)</li>
+              <li><span class="font-semibold text-slate-900">Modalité :</span> présentiel / distance possible</li>
+            </ul>
+          </div>
+
+          <!-- <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <h3 class="text-lg font-semibold text-slate-900">Navigation</h3>
+            <div class="mt-3 grid gap-2 text-sm">
+              <a class="navlink" href="#appel-a-communications">Appel à communications</a>
+              <a class="navlink" href="#comite-organisation">Comité d’organisation</a>
+              <a class="navlink" href="#comite-scientifique">Comité scientifique</a>
+              <a class="navlink" href="#conferenciers-invites">Conférenciers invités</a>
+              <a class="navlink" href="#programme">Programme</a>
+              <a class="navlink" href="#informations-pratiques">Informations pratiques</a>
+            </div>
+          </div> -->
+
+          <!-- <div class="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm text-sm text-slate-700">
+            <div class="font-semibold text-slate-900">Astuce</div>
+            <p class="mt-2">
+              Les onglets sont pilotés par l’URL (<code class="rounded bg-slate-100 px-1 py-0.5 text-slate-900">#...</code>)
+              pour partager un lien direct vers une section.
+            </p>
+          </div>
+        </div> -->
+      </aside>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-200 bg-white mt-16">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600">
+      <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div>© 2026 · Colloque international – Hanoi</div>
+        <!-- <div class="text-slate-500">Site statique HTML/CSS/JS · Tailwind via CDN</div> -->
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // --- Tabs + hash routing (B1) ---
+    const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
+    const panels = Array.from(document.querySelectorAll(".tab-panel"));
+
+    tabButtons.forEach(btn => {
+      btn.className = [
+        "tab-btn",
+        "whitespace-nowrap rounded-xl px-3 py-2 text-sm font-semibold transition shadow-sm",
+        "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+      ].join(" ");
+    });
+
+    document.querySelectorAll(".navlink").forEach(a => {
+      a.className = "navlink rounded-xl border border-slate-200 bg-white px-3 py-2 hover:bg-slate-50 transition text-slate-800 shadow-sm";
+    });
+
+    document.querySelectorAll(".member").forEach(el => {
+      el.className = "member rounded-xl border border-slate-200 bg-slate-50 p-4";
+      const affil = el.querySelector(".affil");
+      if (affil) affil.className = "affil block text-sm text-slate-700 mt-1";
+    });
+
+    function activateTab(id) {
+      panels.forEach(p => p.classList.toggle("hidden", p.id !== id));
+
+      tabButtons.forEach(b => {
+        const active = b.dataset.tab === id;
+        b.classList.toggle("bg-slate-900", active);
+        b.classList.toggle("text-white", active);
+        b.classList.toggle("border-slate-900", active);
+
+        b.classList.toggle("bg-white", !active);
+        b.classList.toggle("text-slate-700", !active);
+        b.classList.toggle("border-slate-200", !active);
+      });
+
+      if (location.hash !== "#" + id) history.replaceState(null, "", "#" + id);
+      const target = document.getElementById(id);
+    //   if (target) target.scrollIntoView({ block: "start" });
+    }
+
+    function initialTabFromHash() {
+    //   const id = (location.hash || "#appel-a-communications").slice(1);
+      const exists = panels.some(p => p.id === id);
+      activateTab(exists ? id : "appel-a-communications");
+    }
+
+    tabButtons.forEach(btn => btn.addEventListener("click", () => activateTab(btn.dataset.tab)));
+    window.addEventListener("hashchange", initialTabFromHash);
+    initialTabFromHash();
+  </script>
+</body>
+</html>
